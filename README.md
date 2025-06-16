@@ -1,2 +1,0 @@
-# AI-builder
-future technology
