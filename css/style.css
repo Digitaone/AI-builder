@@ -1,0 +1,182 @@
+/* General Body Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+}
+
+/* Header and Navigation */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c5a47e;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+/* Featured Posts & Post Grid */
+.featured-posts, .post-grid {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-posts h2, .related-posts h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-preview {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.post-preview:hover {
+    transform: translateY(-5px);
+}
+
+.post-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-preview-content {
+    padding: 1.5rem;
+}
+
+.post-preview-content h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 1rem 0;
+}
+
+.post-preview-content p {
+    font-size: 0.9rem;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background: #f4f4f4;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.8rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 0.8rem 1.5rem;
+    background: #c5a47e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Simple hiding for now, can be replaced with a burger menu */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input[type="email"] {
+        width: 100%;
+        max-width: 300px;
+    }
+}
