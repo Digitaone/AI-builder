@@ -119,26 +119,55 @@ header a:hover {
 
 /* Buttons */
 .button_1 {
+    display: inline-block;
     height: 40px;
-    background: #ff7f50;
+    line-height: 40px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
     border: none;
     padding: 0 20px;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .button_1:hover {
-    background: #ff6347;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 /* Sidebar */
-aside#sidebar {
-    background: #ffffff;
+aside#sidebar .dark {
+    background: #343a40;
+    color: #ffffff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+aside#sidebar .dark h3 {
+    color: #ff7f50;
+}
+
+aside#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside#sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #495057;
+    transition: background 0.3s ease;
+}
+
+aside#sidebar ul li a:hover {
+    background: #495057;
 }
 
 /* Main-col */
@@ -155,11 +184,54 @@ article#main-col {
 
 /* Footer */
 footer {
-    padding: 30px;
+    padding: 40px 0;
     margin-top: 40px;
     color: #ffffff;
-    background-color: #343a40;
+    background: #343a40;
     text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.footer-content h3 {
+    color: #ff7f50;
+    margin-bottom: 15px;
+}
+
+.footer-content p, .footer-content a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: #ff7f50;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff7f50;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #495057;
 }
 
 /* Media Queries */
