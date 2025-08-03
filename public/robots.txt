@@ -1,0 +1,10 @@
+# Allow all friendly crawlers
+User-agent: *
+Disallow: /admin/ # Disallow access to the admin area
+
+# Allow specific crawlers more access if needed, e.g.
+# User-agent: Googlebot
+# Disallow:
+
+# Point to the sitemap (we will create this in a later step)
+Sitemap: /sitemap.xml
