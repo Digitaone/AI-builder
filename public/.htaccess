@@ -1,0 +1,27 @@
+# Enable URL Rewriting
+RewriteEngine On
+
+# Set the base directory for rewrite rules
+RewriteBase /
+
+# Rule to redirect old .php URLs to clean URLs (optional but good for SEO)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Rule to handle routing
+# First, make sure the request is not for an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route for static pages
+RewriteRule ^(about|contact)/?$ $1.php [L,NC]
+
+# Route for category pages
+RewriteRule ^category/([^/]+)/?$ category.php?name=$1 [L,QSA,NC]
+
+# Route for single post pages (slug is optional for the script but good for the URL)
+RewriteRule ^post/(\d+)/?([^/]+)?/?$ single_post.php?id=$1&slug=$2 [L,QSA,NC]
+
+# Route for the homepage (if needed, though usually handled by DirectoryIndex)
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ index.php [L]
