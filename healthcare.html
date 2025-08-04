@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare - WanderChicVibes</title>
+    <meta name="description" content="Explore all our healthcare-related blog posts on WanderChicVibes.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body data-category="Healthcare">
+
+    <header role="banner" class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">WanderChicVibes</a>
+            <nav role="navigation" class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="travel.html">Travel</a></li>
+                            <li><a href="lifestyle.html">Lifestyle</a></li>
+                            <li><a href="healthcare.html">Healthcare</a></li>
+                            <li><a href="fashion.html">Fashion</a></li>
+                            <li><a href="food.html">Food</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+        </div>
+    </header>
+
+    <main id="category-main" class="container">
+        <header class="page-header">
+            <h1 class="page-title">Healthcare</h1>
+        </header>
+        <div class="post-grid">
+            <!-- Posts for the Healthcare category will be loaded here -->
+        </div>
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About WanderChicVibes</h3>
+                    <p>Your ultimate source for inspiration, tips, and guides to living a chic and vibrant life through travel, fashion, and wellness.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Join Our Newsletter</h3>
+                    <form id="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p id="newsletter-feedback"></p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WanderChicVibes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

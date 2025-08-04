@@ -1,0 +1,6 @@
+# Allow all user agents to crawl the site
+User-agent: *
+Disallow:
+
+# Point crawlers to the sitemap
+Sitemap: https://wanderchicvibes.com/sitemap.xml

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://wanderchicvibes.com/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://wanderchicvibes.com/travel.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/lifestyle.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/fashion.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/healthcare.html</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/food.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=1</loc>
+    <lastmod>2024-07-15</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=2</loc>
+    <lastmod>2024-07-20</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=3</loc>
+    <lastmod>2024-07-25</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=4</loc>
+    <lastmod>2024-08-01</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=5</loc>
+    <lastmod>2024-08-05</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://wanderchicvibes.com/post.html?id=6</loc>
+    <lastmod>2024-08-10</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
