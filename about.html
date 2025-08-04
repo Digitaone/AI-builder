@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WanderChicVibes</title>
+    <meta name="description" content="Learn about the mission and team behind WanderChicVibes.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <header role="banner" class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">WanderChicVibes</a>
+            <nav role="navigation" class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" aria-haspopup="true">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="travel.html">Travel</a></li>
+                            <li><a href="lifestyle.html">Lifestyle</a></li>
+                            <li><a href="healthcare.html">Healthcare</a></li>
+                            <li><a href="fashion.html">Fashion</a></li>
+                            <li><a href="food.html">Food</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="page-title">About WanderChicVibes</h1>
+        </header>
+        <div class="page-content">
+            <p>Welcome to WanderChicVibes, your premier destination for inspiration on living a life full of style, adventure, and wellness. We believe that life is a grand journey, meant to be explored with elegance, curiosity, and a touch of chic.</p>
+
+            <h2>Our Mission</h2>
+            <p>Our mission is to empower and inspire our readers to embrace their inner wanderer and chic sensibility. We curate high-quality content across Travel, Lifestyle, Healthcare, and Fashion, providing practical tips, in-depth guides, and personal stories that resonate with the modern, globally-minded individual. We aim to be your trusted companion as you navigate the beautiful complexities of life, helping you to live more vibrantly, travel more wisely, and dress more consciously.</p>
+
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/team-member-1.jpg" alt="Photo of Jane Doe" class="team-photo">
+                    <h3>Jane Doe</h3>
+                    <p class="team-title">Founder & Editor-in-Chief</p>
+                    <p>Jane combines her passion for storytelling with a decade of experience in the fashion and travel industries to bring WanderChicVibes to life.</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/team-member-2.jpg" alt="Photo of John Smith" class="team-photo">
+                    <h3>John Smith</h3>
+                    <p class="team-title">Head of Wellness Content</p>
+                    <p>A certified nutritionist and yoga instructor, John is dedicated to sharing actionable advice for a healthier, more balanced lifestyle.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo" class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>About WanderChicVibes</h3>
+                    <p>Your ultimate source for inspiration, tips, and guides to living a chic and vibrant life through travel, fashion, and wellness.</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Join Our Newsletter</h3>
+                    <form id="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p id="newsletter-feedback"></p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                    <a href="#" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WanderChicVibes. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

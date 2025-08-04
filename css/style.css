@@ -563,6 +563,60 @@ main h2 {
     color: #aaa;
 }
 
+/* Contact Form */
+.contact-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-accent-color);
+    box-shadow: 0 0 0 2px var(--secondary-accent-color);
+}
+
+.form-feedback {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.social-links-contact {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.social-links-contact h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links-contact a {
+    margin: 0 1rem;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
 .post-full-meta .bull {
     margin: 0 0.5rem;
 }

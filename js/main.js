@@ -78,6 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (newsletterForm) {
             newsletterForm.addEventListener('submit', handleNewsletterSignup);
         }
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleContactFormSubmit);
+        }
     };
 
     /**
@@ -293,6 +299,32 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('meta[property="twitter:title"]')?.setAttribute('content', pageTitle);
         document.querySelector('meta[property="twitter:description"]')?.setAttribute('content', description);
         document.querySelector('meta[property="twitter:image"]')?.setAttribute('content', post.image);
+    };
+
+    /**
+     * Handles the contact form submission.
+     * @param {Event} e - The form submission event.
+     */
+    const handleContactFormSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const feedbackEl = document.getElementById('contact-feedback');
+
+        // Basic validation
+        if (form.name.value.trim() === '' || form.email.value.trim() === '' || form.message.value.trim() === '') {
+            feedbackEl.textContent = 'Please fill out all fields.';
+            feedbackEl.style.color = 'red';
+            return;
+        }
+
+        // On success:
+        feedbackEl.textContent = 'Thank you for your message! We will get back to you shortly.';
+        feedbackEl.style.color = 'var(--secondary-accent-color)';
+        form.reset();
+
+        setTimeout(() => {
+            feedbackEl.textContent = '';
+        }, 5000);
     };
 
     /**
