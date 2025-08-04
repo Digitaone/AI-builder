@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderCategoryPage(allPosts, category);
             }
 
+
         } catch (error) {
             console.error('Initialization failed:', error);
         }
@@ -229,6 +230,15 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMetaTags(post);
         renderSinglePost(post);
         injectSchema_BlogPosting(post);
+        renderComments(post);
+
+        const commentForm = document.getElementById('comment-form');
+        if (commentForm) {
+            commentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                handleCommentSubmission(post);
+            });
+        }
     };
 
     /**
@@ -299,6 +309,65 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('meta[property="twitter:title"]')?.setAttribute('content', pageTitle);
         document.querySelector('meta[property="twitter:description"]')?.setAttribute('content', description);
         document.querySelector('meta[property="twitter:image"]')?.setAttribute('content', post.image);
+    };
+
+    /**
+     * Renders the comments for a given post.
+     * @param {object} post - The post object.
+     */
+    const renderComments = (post) => {
+        const container = document.getElementById('comments-list');
+        if (!container) return;
+
+        const staticComments = post.comments || [];
+
+        const storedComments = JSON.parse(localStorage.getItem(`comments_post_${post.id}`)) || [];
+
+        const allComments = [...staticComments, ...storedComments].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+        if (allComments.length === 0) {
+            container.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+            return;
+        }
+
+        container.innerHTML = allComments.map(comment => `
+            <div class="comment">
+                <p class="comment-meta">
+                    <strong>${comment.username}</strong> on
+                    <time datetime="${comment.timestamp}">${new Date(comment.timestamp).toLocaleDateString()}</time>
+                </p>
+                <p>${comment.text}</p>
+            </div>
+        `).join('');
+    };
+
+    /**
+     * Handles the submission of a new comment.
+     * @param {object} post - The post to which the comment is being added.
+     */
+    const handleCommentSubmission = (post) => {
+        const nameInput = document.getElementById('comment-name');
+        const textInput = document.getElementById('comment-text');
+
+        if (nameInput.value.trim() === '' || textInput.value.trim() === '') {
+            // Simple validation
+            return;
+        }
+
+        const newComment = {
+            username: nameInput.value.trim(),
+            timestamp: new Date().toISOString(),
+            text: textInput.value.trim()
+        };
+
+        const key = `comments_post_${post.id}`;
+        const existingComments = JSON.parse(localStorage.getItem(key)) || [];
+        existingComments.push(newComment);
+        localStorage.setItem(key, JSON.stringify(existingComments));
+
+        renderComments(post); // Re-render the comments list
+        nameInput.value = '';
+        textInput.value = '';
     };
 
     /**

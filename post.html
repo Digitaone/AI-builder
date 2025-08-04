@@ -74,7 +74,28 @@
 
     <main id="post-main">
         <article class="post-full container">
-            <!-- Post content will be loaded here by JavaScript -->
+            <div id="post-content-container">
+                <!-- Post content will be loaded here by JavaScript -->
+            </div>
+
+            <section id="comments-section" class="comments-section">
+                <h2>Comments</h2>
+                <div id="comments-list">
+                    <!-- Comments will be rendered here -->
+                </div>
+                <form id="comment-form" class="comment-form">
+                    <h3>Leave a Comment</h3>
+                    <div class="form-group">
+                        <label for="comment-name">Name</label>
+                        <input type="text" id="comment-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment-text">Comment</label>
+                        <textarea id="comment-text" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Comment</button>
+                </form>
+            </section>
         </article>
 
         <aside class="related-posts container">

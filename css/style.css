@@ -563,6 +563,50 @@ main h2 {
     color: #aaa;
 }
 
+/* ------------------- */
+/* Comments Section    */
+/* ------------------- */
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.comments-section h2, .comment-form h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#comments-list {
+    margin-bottom: 2rem;
+}
+
+.comment {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--card-bg-color);
+}
+
+.comment-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .comment-meta {
+    color: #aaa;
+}
+
+.comment-meta strong {
+    color: var(--heading-color);
+}
+
+.comment p:last-child {
+    margin-bottom: 0;
+}
+
 /* Contact Form */
 .contact-form {
     margin-top: 2rem;

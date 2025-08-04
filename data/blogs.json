@@ -7,17 +7,25 @@
     "date": "2024-07-15",
     "category": "Travel",
     "image": "assets/kyoto.jpg",
-    "tags": ["Japan", "Kyoto", "Travel", "Asia"]
+    "tags": ["Japan", "Kyoto", "Travel", "Asia"],
+    "comments": [
+      {
+        "username": "Alex",
+        "timestamp": "2024-07-16T10:30:00Z",
+        "text": "This guide is amazing! I'm planning a trip to Kyoto next month and this is exactly what I was looking for."
+      }
+    ]
   },
   {
     "id": 2,
     "title": "The Ultimate Guide to a Chic Capsule Wardrobe",
-    "content": "A capsule wardrobe is the secret to effortless style. It's about having a curated collection of essential items that you love to wear, which can be mixed and matched to create a multitude of outfits. In this guide, we'll walk you through the process of building a chic and versatile capsule wardrobe. Learn how to define your personal style, choose a color palette, and select timeless pieces that will serve you for years to come. Say goodbye to closet clutter and hello to sophisticated simplicity.",
+    "content": "A capsule wardrobe is the secret to effortless style. It's about having a curated collection of essential items that you love to wear, which can be mixed and matched to create a multitude of outfits. In this guide, we'llwalk you through the process of building a chic and versatile capsule wardrobe. Learn how to define your personal style, choose a color palette, and select timeless pieces that will serve you for years to come. Say goodbye to closet clutter and hello to sophisticated simplicity.",
     "author": "Isabella Rossi",
     "date": "2024-07-20",
     "category": "Fashion",
     "image": "assets/capsule-wardrobe.jpg",
-    "tags": ["Fashion", "Style", "Minimalism", "Wardrobe"]
+    "tags": ["Fashion", "Style", "Minimalism", "Wardrobe"],
+    "comments": []
   },
   {
     "id": 3,
@@ -27,7 +35,19 @@
     "date": "2024-07-25",
     "category": "Healthcare",
     "image": "assets/meditation.jpg",
-    "tags": ["Healthcare", "Wellness", "Mindfulness", "Meditation"]
+    "tags": ["Healthcare", "Wellness", "Mindfulness", "Meditation"],
+    "comments": [
+      {
+        "username": "Sarah",
+        "timestamp": "2024-07-26T14:00:00Z",
+        "text": "Thank you for this. I've been wanting to start meditating and this is a great starting point."
+      },
+      {
+        "username": "Mike",
+        "timestamp": "2024-07-27T09:00:00Z",
+        "text": "Great article! Very helpful."
+      }
+    ]
   },
   {
     "id": 4,
@@ -37,7 +57,8 @@
     "date": "2024-08-01",
     "category": "Food",
     "image": "assets/amalfi-coast.jpg",
-    "tags": ["Food", "Travel", "Italy", "Cuisine"]
+    "tags": ["Food", "Travel", "Italy", "Cuisine"],
+    "comments": []
   },
   {
     "id": 5,
@@ -47,7 +68,8 @@
     "date": "2024-08-05",
     "category": "Lifestyle",
     "image": "assets/balanced-lifestyle.jpg",
-    "tags": ["Lifestyle", "Wellness", "Self-Care", "Productivity"]
+    "tags": ["Lifestyle", "Wellness", "Self-Care", "Productivity"],
+    "comments": []
   },
   {
     "id": 6,
@@ -57,6 +79,7 @@
     "date": "2024-08-10",
     "category": "Fashion",
     "image": "assets/sustainable-fashion.jpg",
-    "tags": ["Fashion", "Sustainability", "Eco-Friendly", "Ethical Fashion"]
+    "tags": ["Fashion", "Sustainability", "Eco-Friendly", "Ethical Fashion"],
+    "comments": []
   }
 ]
